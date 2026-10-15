@@ -1,0 +1,11 @@
+{
+  "name": "windows-vm-mcp-server",
+  "version": "1.0.0",
+  "description": "Servidor MCP (Model Context Protocol) para controle de VM Windows / Tiny10 via VNC",
+  "main": "server.mjs",
+  "type": "module",
+  "dependencies": {
+    "@hrrrsn/mcp-vnc": "^1.0.2",
+    "@modelcontextprotocol/sdk": "^1.0.4"
+  }
+}

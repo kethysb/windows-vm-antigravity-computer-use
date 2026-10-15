@@ -1,0 +1,31 @@
+# Dependências Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Imagens de Disco e Arquivos Pesados de Máquinas Virtuais (VMware)
+*.iso
+*.vmdk
+*.vmem
+*.nvram
+*.vmsd
+*.scoreboard
+*.vmwarevm
+*.dmp
+*.lck/
+*.lck
+*.bak
+
+# Logs do VMware e Sandbox
+*.log
+mksSandbox*.log
+vmware*.log
+
+# Arquivos de Sistema e Credenciais
+.env
+*.dpapi
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.DS_Store

@@ -1,0 +1,43 @@
+.encoding = "windows-1252"
+config.version = "8"
+virtualHW.version = "21"
+displayName = "Tiny10 - Automacao Antigravity"
+guestOS = "windows10-64"
+memsize = "3072"
+numvcpus = "2"
+cpuid.coresPerSocket = "2"
+firmware = "efi"
+
+# Armazenamento e Disco Virtual
+sata0.present = "TRUE"
+sata0:0.present = "TRUE"
+sata0:0.fileName = "Tiny10.vmdk"
+
+# Unidade de CD/DVD para instalacao via ISO
+sata0:1.present = "TRUE"
+sata0:1.deviceType = "cdrom-image"
+sata0:1.startConnected = "TRUE"
+sata0:1.fileName = "tiny10_x64_23h2.iso"
+
+# Rede (Modo NAT - isolado e com acesso a internet)
+ethernet0.present = "TRUE"
+ethernet0.connectionType = "nat"
+ethernet0.virtualDev = "e1000"
+ethernet0.addressType = "generated"
+ethernet0.startConnected = "TRUE"
+
+# Graficos e Display
+svga.vramSize = "268435456"
+mks.enable3d = "TRUE"
+sound.present = "FALSE"
+usb.present = "TRUE"
+tools.syncTime = "TRUE"
+
+# -------------------------------------------------------------
+# 🌟 O SEGREDO DO CONTROLE DO AGENTE: VNC NATIVO DO HYPERVISOR
+# Permite ao Antigravity controlar a VM sem nenhum agente guest!
+# -------------------------------------------------------------
+RemoteDisplay.vnc.enabled = "TRUE"
+RemoteDisplay.vnc.port = "5958"
+RemoteDisplay.vnc.ip = "127.0.0.1"
+RemoteDisplay.vnc.keyMap = "us"
